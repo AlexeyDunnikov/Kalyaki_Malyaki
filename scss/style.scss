@@ -301,8 +301,18 @@
     }
   }
 
+  .slick-slide {
+    max-width: 255px;
+    margin: 0 15px;
+  }
+
   &__item-img {
     margin-bottom: 5px;
+    border-radius: 10px;
+    max-height: 307px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__item-text {
@@ -310,6 +320,43 @@
     line-height: 31px;
     color: $black;
     text-align: center;
+  }
+}
+
+.girls {
+}
+
+.products {
+  & &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
+  }
+
+  &__item {
+    margin: 15px 10px;
+    max-width: 255px;
+  }
+
+  &__item-link {
+    height: 100%;
+  }
+
+  &__item-link__img {
+    max-height: 307px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 4px;
+  }
+
+  &__item-link__text {
+    text-align: center;
+    font-size: 22px;
+    line-height: 31px;
+    color: $black;
   }
 }
 

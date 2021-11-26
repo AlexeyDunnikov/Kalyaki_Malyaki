@@ -54,7 +54,7 @@ svg path{
 }
 
 .page-section{
-	margin-bottom: 75px;
+	margin-bottom: 65px;
 }
 
 .section-title {
@@ -62,7 +62,7 @@ svg path{
   font-size: 29px;
   line-height: 41px;
   color: $black;
-  margin-bottom: 46px;
+  margin-bottom: 36px;
 
   &__text {
     padding-bottom: 2px;
@@ -79,7 +79,3 @@ svg path{
 	transform: translateY(-50%);
 }
 
-.slick-slide{
-	max-width: 255px;
-	margin: 0 15px;
-}
