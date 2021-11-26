@@ -277,6 +277,42 @@
   }
 }
 
+.new {
+  margin-bottom: 60px;
+
+  &__list {
+    margin: 0 -15px;
+    position: relative;
+  }
+
+  &__list-arrow {
+    &:hover {
+      .slide-arrow__img path {
+        fill: $black;
+      }
+    }
+
+    &--prev {
+      left: -45px;
+    }
+
+    &--next {
+      right: -45px;
+    }
+  }
+
+  &__item-img {
+    margin-bottom: 5px;
+  }
+
+  &__item-text {
+    font-size: 22px;
+    line-height: 31px;
+    color: $black;
+    text-align: center;
+  }
+}
+
 .socials {
   &__list {
     display: flex;
@@ -311,11 +347,11 @@
       margin-right: 40px;
     }
 
-    &--info{
+    &--info {
       margin-left: 40px;
     }
 
-    &--contacts{
+    &--contacts {
       margin-left: auto;
     }
   }
