@@ -323,24 +323,16 @@
   }
 }
 
-.girls {
-}
-
 .products {
   & &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 -10px;
+    justify-content: center;
+    margin: 0 -15px;
   }
 
   &__item {
-    margin: 15px 10px;
-    max-width: 255px;
-  }
-
-  &__item-link {
-    height: 100%;
+    margin: 10px 15px;
   }
 
   &__item-link__img {
@@ -358,6 +350,10 @@
     line-height: 31px;
     color: $black;
   }
+}
+
+.antistress{
+  margin-bottom: 145px;
 }
 
 .socials {
