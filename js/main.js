@@ -3,7 +3,7 @@ $(function () {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    //autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     nextArrow: `<button class="new__list-arrow new__list-arrow--prev slide-arrow">
           <svg class="new__list-arrow__img slide-arrow__img" width="13" height="30" viewBox="0 0 13 30" fill="none" xmlns="http://www.w3.org/2000/svg">
