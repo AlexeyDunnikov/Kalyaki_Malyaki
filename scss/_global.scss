@@ -34,8 +34,8 @@ body {
   padding: 0 15px;
 }
 
-svg path{
-	transition: ease 0.3s;
+svg path {
+  transition: ease 0.3s;
 }
 
 .btn {
@@ -53,8 +53,8 @@ svg path{
   }
 }
 
-.page-section{
-	margin-bottom: 65px;
+.page-section {
+  margin-bottom: 65px;
 }
 
 .section-title {
@@ -70,13 +70,13 @@ svg path{
   }
 }
 
-.slide-arrow{
-	position: absolute;
-	padding: 10px 15px;
-	cursor: pointer;
-	z-index: 5;
-	top: 50%;	
-	transform: translateY(-50%);
+.slide-arrow {
+  position: absolute;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .dropdown {
@@ -103,7 +103,7 @@ svg path{
     }
   }
 
-  &-item__link{
+  &-item__link {
     display: block;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
@@ -120,3 +120,48 @@ svg path{
   }
 }
 
+.to-top-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue;
+  border-radius: 50%;
+  cursor: pointer;
+
+  right: 50px;
+  bottom: 50px;
+
+  background-image: linear-gradient(
+    bottom,
+    rgb(73, 132, 180) 0%,
+    rgb(97, 155, 203) 100%
+  );
+
+  box-shadow: 0px 0px 0px #2b638f, 0px 3px 15px rgba(0, 0, 0, 0.4),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.3),
+    inset 0px 0px 3px rgba(255, 255, 255, 0.5);
+
+  transition: all 0.2s ease-in-out;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5) translateY(100px);
+
+  
+  &--active{
+	  opacity: 1;
+	  visibility: visible;
+	  transform: scale(1) translateY(0);
+  }
+
+  &:active {
+    background-image: linear-gradient(
+      bottom,
+      rgb(88, 154, 204) 0%,
+      rgb(90, 150, 199) 100%
+    );
+  }
+}

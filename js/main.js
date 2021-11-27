@@ -45,10 +45,29 @@ $(function () {
 });
 
 //gamburger
-let menuBtn = document.querySelector(".header__hamburger-btn");
-let aside = document.querySelector(".header__aside-menu");
+const menuBtn = document.querySelector(".header__hamburger-btn");
+const aside = document.querySelector(".header__aside-menu");
 menuBtn.addEventListener("click", (evt) => {
   evt.preventDefault();
   menuBtn.classList.toggle("header__hamburger-btn--active");
   aside.classList.toggle("header__aside-menu--active");
 });
+
+//to top button
+const toTopBtn = document.querySelector('.to-top-btn');
+
+toTopBtn.addEventListener('click', (evt) => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+})
+
+window.addEventListener('scroll', (evt) => {
+  if (window.pageYOffset >= 1000){
+    toTopBtn.classList.add('to-top-btn--active');
+  }
+  else{
+    toTopBtn.classList.remove("to-top-btn--active");
+  }
+})
