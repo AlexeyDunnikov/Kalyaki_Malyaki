@@ -79,3 +79,44 @@ svg path{
 	transform: translateY(-50%);
 }
 
+.dropdown {
+  &-list {
+    z-index: 10;
+    position: absolute;
+    min-width: 253px;
+    box-shadow: 3px 3px 5px 1px rgba($black, 0.2);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    transform: scaleY(0.4);
+    transform-origin: 0 0;
+  }
+
+  &-item {
+    @each $index, $color in $dropdown-colors {
+      &:nth-child(#{$index}) {
+        .dropdown-item__link {
+          background-color: $color;
+        }
+      }
+    }
+  }
+
+  &-item__link{
+    display: block;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 16px 30px;
+    border-left: 6px solid transparent;
+
+    .dropdown-item &:hover {
+      border-color: #a3b5bd;
+      box-shadow: inset 10px 0px 4px -8px rgba(0, 0, 0, 0.12);
+      background-color: #eceeef;
+    }
+  }
+}
+
