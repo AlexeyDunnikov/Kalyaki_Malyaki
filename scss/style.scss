@@ -84,8 +84,6 @@
     cursor: pointer;
     z-index: 100;
 
-    
-
     span {
       position: absolute;
       top: 50%;
@@ -160,10 +158,6 @@
   &__nav-item {
     position: relative;
 
-    &:not(:last-of-type) {
-      margin-right: 40px;
-    }
-
     &:hover {
       .header__nav-item__link {
         text-shadow: 1px 0 0 rgba($black, 0.4), 0 -1px 0 rgba($black, 0.4),
@@ -173,42 +167,51 @@
         &::after {
           transform: rotate(180deg) translateY(50%);
         }
+
+        .header__nav-item__link-text::after {
+          width: 100%;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &--dropdown {
+      &:hover {
+        .header__nav__dropdown-list {
+          visibility: visible;
+          opacity: 1;
+          transform: scaleY(1);
+        }
       }
 
-      .header__nav-item__link-text::after {
-        width: 100%;
-        left: 0;
-        right: 0;
+      .header__nav-item__link {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          background-image: url("../images/icons/dropdown-arrow.svg");
+          width: 15px;
+          height: 8px;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          transform-origin: 50% 50%;
+          transition: ease 0.3s;
+        }
       }
+    }
 
-      .header__nav__dropdown-list {
-        visibility: visible;
-        opacity: 1;
-        transform: scaleY(1);
-      }
+    &:not(:last-of-type) {
+      margin-right: 40px;
     }
   }
 
   &__nav-item__link {
-    position: relative;
     padding: 18px 20px 22px;
     font-size: 17px;
     line-height: 22px;
-    color: $black;
     transition: ease 0.3s;
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url("../images/icons/dropdown-arrow.svg");
-      width: 15px;
-      height: 8px;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      transform-origin: 50% 50%;
-      transition: ease 0.3s;
-    }
   }
 
   &__nav-item__link-text {
@@ -228,9 +231,6 @@
   &__nav__dropdown-list {
     top: 100%;
     left: 0;
-  }
-
-  &__nav__dropdown-link {
   }
 }
 
@@ -469,4 +469,4 @@
   }
 }
 
-@import 'media';
+@import "media";
