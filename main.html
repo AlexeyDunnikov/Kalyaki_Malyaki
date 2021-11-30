@@ -14,6 +14,73 @@
   </head>
   <body>
     <div class="wrapper">
+      <aside class="aside-menu">
+        <a class="aside-menu__logo logo-link" href="#">
+          <img class="logo" src="images/logo.png" alt="logo" />
+        </a>
+
+        <form class="aside-menu__form search-form">
+          <input
+            class="aside-menu-input search-input"
+            type="text"
+            placeholder="Поиск"
+          />
+          <a class="aside-menu__search-link search-link" href="#">
+            <img
+              class="aside-menu__search-img"
+              src="images/icons/search.svg"
+              alt="search"
+            />
+          </a>
+        </form>
+
+        <ul class="aside-menu__list">
+          <li class="aside-menu__item">
+            <a class="aside-menu__item-link" href="#">
+              Главная
+            </a>
+          </li>
+          <li class="aside-menu__item">
+            <a class="aside-menu__item-link  aside-menu__item-link-dropdown" href="#">
+              Категории
+            </a>
+            <ul class="aside-menu__dropdown">
+              <li class="aside-menu__dropdown-item">
+                <a class="aside-menu__dropdown-link" href="#" >
+                  Маша и медведь
+                </a>
+              </li>
+              <li class="aside-menu__dropdown-item">
+                <a class="aside-menu__dropdown-link" href="#" >
+                  Маша и медведь
+                </a>
+              </li>
+              <li class="aside-menu__dropdown-item">
+                <a class="aside-menu__dropdown-link" href="#" >
+                  Маша и медведь
+                </a>
+              </li>
+              <li class="aside-menu__dropdown-item">
+                <a class="aside-menu__dropdown-link" href="#" >
+                  Маша и медведь
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="aside-menu__item">
+            <a class="aside-menu__item-link" href="#">
+              Раскраски антистресс
+            </a>
+          </li>
+        </ul>
+
+        <a class="aside-menu__user-btn" href="#">
+          <span class="aside-menu__user-btn-text">
+            Аккаунт
+          </span>
+          <img class="aside-menu__user-btn-img" src="images/icons/user.png" alt="user">
+        </a>
+      </aside>
       <img
         class="top-img"
         src="images/top-left-img.png"
@@ -39,19 +106,22 @@
       <header class="header">
         <div class="container">
           <div class="header__top">
-          
+            <button class="header__hamburger-btn">
+              <span></span>
+            </button>
+
             <a class="header__logo logo-link" href="#">
               <img class="logo" src="images/logo.png" alt="logo" />
             </a>
 
             <div class="header__user-nav">
-              <form class="header__form">
+              <form class="header__form search-form">
                 <input
-                  class="header__form-input"
+                  class="header__form-input search-input"
                   type="text"
                   placeholder="Поиск"
                 />
-                <a class="header__form__search-link" href="#">
+                <a class="header__form__search-link search-link" href="#">
                   <img
                     class="header__form__search-img"
                     src="images/icons/search.svg"
@@ -78,11 +148,33 @@
               </li>
               <li class="header__nav-item header__nav-item--dropdown">
                 <a class="header__nav-item__link" href="#">
-                  <span class="header__nav-item__link-text">
-                    Категории
-                  </span>
+                  <span class="header__nav-item__link-text"> Категории </span>
                 </a>
                 <ul class="header__nav__dropdown-list dropdown-list">
+                  <li class="header__nav__dropdown-item dropdown-item">
+                    <a
+                      class="header__nav__dropdown-link dropdown-item__link"
+                      href="#"
+                    >
+                      Маша и медведь
+                    </a>
+                  </li>
+                  <li class="header__nav__dropdown-item dropdown-item">
+                    <a
+                      class="header__nav__dropdown-link dropdown-item__link"
+                      href="#"
+                    >
+                      Маша и медведь
+                    </a>
+                  </li>
+                  <li class="header__nav__dropdown-item dropdown-item">
+                    <a
+                      class="header__nav__dropdown-link dropdown-item__link"
+                      href="#"
+                    >
+                      Маша и медведь
+                    </a>
+                  </li>
                   <li class="header__nav__dropdown-item dropdown-item">
                     <a
                       class="header__nav__dropdown-link dropdown-item__link"
@@ -147,9 +239,7 @@
                     Раскраски антистресс
                   </span>
                 </a>
-                
               </li>
-              
             </ul>
           </nav>
         </div>
