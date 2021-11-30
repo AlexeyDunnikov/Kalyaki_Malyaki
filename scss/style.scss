@@ -452,7 +452,15 @@
   }
 
   &__item {
+    
     margin: 10px 15px;
+  }
+
+  &__item-link{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__item-link__img {
@@ -560,9 +568,6 @@
 .card-description {
   margin-top: 35px;
   margin-bottom: 60px;
-  &__title {
-    margin-bottom: 60px;
-  }
 
   &__inner {
     display: flex;
@@ -570,6 +575,7 @@
   }
 
   &__img-box {
+    min-width: 170px;
     max-width: 255px;
     margin-right: 55px;
   }
@@ -583,6 +589,10 @@
   &__content {
     max-width: 800px;
     padding-top: 5px;
+  }
+
+  &__content-text {
+    max-width: 800px;
   }
 
   &__content-title {
@@ -601,6 +611,10 @@
 
 .card-gallery {
   margin-bottom: 243px;
+
+  &__item-link{
+    
+  }
 
   &__item-link__img {
     border: 1px solid $black;

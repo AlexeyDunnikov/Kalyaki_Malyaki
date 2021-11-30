@@ -1,7 +1,7 @@
 @media (max-width: 1240px) {
-  .new{
-    &__list-arrow{
-      display: none!important;
+  .new {
+    &__list-arrow {
+      display: none !important;
     }
   }
 }
@@ -83,9 +83,23 @@
     }
   }
 
-  .to-top-btn{
+  .to-top-btn {
     right: 30px;
     bottom: 30px;
+  }
+
+  .card-description {
+    &__img-box {
+      margin-right: 30px;
+    }
+    &__content-title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    &__content-text {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -98,13 +112,13 @@
     }
   }
 
-  .to-top-btn{
+  .to-top-btn {
     right: 15px;
     bottom: 15px;
     width: 40px;
     height: 40px;
 
-    &__img{
+    &__img {
       max-width: 20px;
     }
   }
@@ -175,12 +189,12 @@
       font-size: 20px;
       line-height: 24px;
     }
-    &__item{
+    &__item {
       max-width: 160px;
     }
   }
 
-  .antistress{
+  .antistress {
     margin-bottom: 100px;
   }
 
@@ -192,6 +206,29 @@
     &__item-link__text {
       font-size: 20px;
       line-height: 24px;
+    }
+  }
+
+  .card-description {
+    margin-bottom: 50px;
+    &__content-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__content-text {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .card-gallery {
+    margin-bottom: 100px;
+  }
+
+  .card-popup {
+    padding: 20px;
+    &__img {
+      max-width: 300px;
     }
   }
 
@@ -255,11 +292,11 @@
     }
   }
 
-  .products{
-    & &__list{
+  .products {
+    & &__list {
       margin: 0 -5px;
     }
-    &__item{
+    &__item {
       margin: 5px;
       max-width: 135px;
     }
@@ -278,7 +315,53 @@
     }
   }
 
-  .antistress{
+  .antistress {
     margin-bottom: 60px;
+  }
+
+  .card-description {
+    margin-bottom: 40px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__img-box {
+      margin: 0 auto 10px;
+      max-width: 170px;
+    }
+    &__content {
+      padding: 0;
+      width: 100%;
+    }
+    &__content-title {
+      margin-bottom: 10px;
+    }
+  }
+
+  .card-gallery {
+    margin-bottom: 60px;
+  }
+
+  .card-popup {
+    &__img {
+      max-width: 145px;
+    }
+  }
+
+  .catalog {
+    & &__list {
+      margin-bottom: 30px;
+    }
+    &__pagination-item {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__pagination-item {
+      &:not(:last-of-type) {
+        margin-right: 8px;
+      }
+    }
   }
 }
