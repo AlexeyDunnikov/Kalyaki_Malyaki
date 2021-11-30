@@ -340,7 +340,7 @@
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 4px;
-    border: 1px solid $black;
+    
   }
 
   &__item-link__text {
@@ -388,12 +388,7 @@
   visibility: hidden;
   transition: ease-in-out 0.3s;
 
-  background: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); // Make sure this color has an opacity of less than 1
+  background-color: rgba($black, 0.5);
   backdrop-filter: blur(8px);
 
   &.active{
@@ -486,6 +481,10 @@
 
 .card-gallery {
   margin-bottom: 243px;
+
+  &__item-link__img{
+    border: 1px solid $black;
+  }
 }
 
 .catalog {
