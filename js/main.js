@@ -35,6 +35,7 @@ $(function () {
   });
 
   $(".aside-menu__item-link-dropdown").on('click', function(evt){
+    evt.preventDefault();
     $(this).toggleClass("aside-menu__item-link-dropdown--active");
     $(this).next().slideToggle(200);
   });
