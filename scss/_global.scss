@@ -13,7 +13,12 @@ body {
   letter-spacing: 0.05em;
   background-color: $white;
 
-  overflow-x: hidden;
+  //overflow-x: hidden;
+
+  @media (max-width: 620px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .wrapper {
@@ -53,10 +58,24 @@ svg path {
   &:hover {
     box-shadow: inset 0 0 5px $white, 0 0 3px rgba($black, 0.3);
   }
+
+  @media (max-width: 620px) {
+    padding: 12px 50px;
+  }
+  @media (max-width: 440px) {
+    padding: 10px 30px;
+  }
 }
 
 .page-section {
   margin-bottom: 65px;
+
+  @media (max-width: 620px) {
+    margin-bottom: 55px;
+  }
+  @media (max-width: 440px) {
+    margin-bottom: 40px;
+  }
 }
 
 .section-title {
@@ -65,6 +84,25 @@ svg path {
   line-height: 41px;
   color: $black;
   margin-bottom: 36px;
+
+  @media (max-width: 820px) {
+    font-size: 26px;
+    line-height: 30px;
+
+    margin-bottom: 30px;
+  }
+  @media (max-width: 620px) {
+    font-size: 24px;
+    line-height: 28px;
+
+    margin-bottom: 28px;
+  }
+  @media (max-width: 440px) {
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-bottom: 20px;
+  }
 
   &__text {
     padding-bottom: 2px;
@@ -166,5 +204,3 @@ svg path {
     );
   }
 }
-
-
