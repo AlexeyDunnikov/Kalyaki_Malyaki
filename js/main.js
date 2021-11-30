@@ -42,16 +42,21 @@ $(function () {
       },
     ],
   });
+
+  $(".aside-menu__item-link-dropdown").on('click', function(evt){
+    $(this).toggleClass("aside-menu__item-link-dropdown--active");
+    $(this).next().slideToggle(200);
+  });
 });
 
 //gamburger
-// const menuBtn = document.querySelector(".header__hamburger-btn");
-// const aside = document.querySelector(".header__aside-menu");
-// menuBtn.addEventListener("click", (evt) => {
-//   evt.preventDefault();
-//   menuBtn.classList.toggle("header__hamburger-btn--active");
-//   aside.classList.toggle("header__aside-menu--active");
-// });
+const menuBtn = document.querySelector(".header__hamburger-btn");
+const aside = document.querySelector(".aside-menu");
+menuBtn.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  menuBtn.classList.toggle("header__hamburger-btn--active");
+  aside.classList.toggle("aside-menu--active");
+});
 
 //to top button
 const toTopBtn = document.querySelector(".to-top-btn");
