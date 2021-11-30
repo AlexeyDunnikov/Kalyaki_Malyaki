@@ -45,29 +45,69 @@ $(function () {
 });
 
 //gamburger
-const menuBtn = document.querySelector(".header__hamburger-btn");
-const aside = document.querySelector(".header__aside-menu");
-menuBtn.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  menuBtn.classList.toggle("header__hamburger-btn--active");
-  aside.classList.toggle("header__aside-menu--active");
-});
+// const menuBtn = document.querySelector(".header__hamburger-btn");
+// const aside = document.querySelector(".header__aside-menu");
+// menuBtn.addEventListener("click", (evt) => {
+//   evt.preventDefault();
+//   menuBtn.classList.toggle("header__hamburger-btn--active");
+//   aside.classList.toggle("header__aside-menu--active");
+// });
 
 //to top button
-const toTopBtn = document.querySelector('.to-top-btn');
+const toTopBtn = document.querySelector(".to-top-btn");
 
-toTopBtn.addEventListener('click', (evt) => {
+toTopBtn.addEventListener("click", (evt) => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth',
+    behavior: "smooth",
   });
-})
+});
 
-window.addEventListener('scroll', (evt) => {
-  if (window.pageYOffset >= 1000){
-    toTopBtn.classList.add('to-top-btn--active');
-  }
-  else{
+window.addEventListener("scroll", (evt) => {
+  if (window.pageYOffset >= 1000) {
+    toTopBtn.classList.add("to-top-btn--active");
+  } else {
     toTopBtn.classList.remove("to-top-btn--active");
   }
-})
+});
+
+//popup
+const popup = document.querySelector(".popup");
+const popupList = document.querySelector(".popup-list");
+const popupCloseBtn = document.querySelector(".popup__btn-close");
+
+function closePopup(popup) {
+  popup.classList.remove("active");
+  document.body.style.paddingRight = `0px`;
+  document.body.style.overflowY = "visible";
+}
+
+function showPopup(popup, link) {
+  popup.classList.add("active");
+  const scrollWidth = window.innerWidth - document.body.clientWidth;
+  document.body.style.paddingRight = `${scrollWidth}px`;
+
+  document.body.style.overflowY = "hidden";
+  const popupImg = popup.querySelector(".popup__img");
+  popupImg.src = link.dataset.imageSrc;
+}
+
+popupList.addEventListener("click", (evt) => {
+  if (!evt.target.closest(".popup-list__link")) return;
+
+  evt.preventDefault();
+  const link = evt.target.closest(".popup-list__link");
+
+  showPopup(popup, link);
+});
+
+popup.addEventListener("click", (evt) => {
+  if (evt.target.closest(".popup__body")) return;
+
+  closePopup(popup);
+});
+
+popupCloseBtn.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  closePopup(popup);
+});

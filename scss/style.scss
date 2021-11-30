@@ -10,7 +10,6 @@
   top: 0;
   left: 0;
   max-width: 202px;
-  
 }
 
 .header {
@@ -22,6 +21,10 @@
 
   .logo-link {
     margin-right: 176px;
+  }
+
+  &__logo {
+    margin-left: auto;
   }
 
   &__user-nav {
@@ -337,6 +340,7 @@
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 4px;
+    border: 1px solid $black;
   }
 
   &__item-link__text {
@@ -361,6 +365,80 @@
     &:not(:last-of-type) {
       margin-right: 6px;
     }
+  }
+}
+
+
+.card-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: ease-in-out 0.3s;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); // Make sure this color has an opacity of less than 1
+  backdrop-filter: blur(8px);
+
+  &.active{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    max-height: 700px;
+    padding: 20px;
+    background-color: $white;
+    box-shadow: 0px 1px 6px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+  }
+
+  &__btn{
+    &:not(:last-of-type){
+      margin-right: 10px;
+    }
+  }
+
+  &__img{
+    max-height: 500px;
+    object-fit: cover;
+    margin: 0 50px 45px;
+    align-self: center;
+  }
+
+  &__navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__navigation-text{
+    padding: 0 50px;
   }
 }
 
@@ -408,6 +486,52 @@
 
 .card-gallery {
   margin-bottom: 243px;
+}
+
+.catalog {
+  margin-top: 35px;
+  margin-bottom: 85px;
+
+  & &__list {
+    margin-bottom: 75px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__pagination__inner {
+    padding: 7px 20px;
+    display: flex;
+    align-items: center;
+    background-color: #efefef;
+    border-radius: 50px;
+  }
+
+  & &__pagination-list {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  &__pagination-item {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: #3c4f5f;
+
+    &:not(:last-of-type) {
+      margin-right: 15px;
+    }
+  }
+
+  &__pagination-item__link {
+    &--active {
+      color: $black;
+    }
+  }
 }
 
 .footer {

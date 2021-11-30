@@ -14,11 +14,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <img
-        class="top-img"
-        src="images/top-left-img.png"
-        alt="images"
-      />
+      <img class="top-img" src="images/top-left-img.png" alt="images" />
 
       <button class="to-top-btn">
         <svg
@@ -36,67 +32,63 @@
         </svg>
       </button>
 
+      <div class="card-popup popup">
+        <div class="card-popup__body popup__body">
+          <div class="card-popup__btns">
+            <a class="card-popup__btn card-popup__btn--download" href="#">
+              <img
+                class="card-popup__btn-img"
+                src="images/icons/download.png"
+                alt="download"
+              />
+            </a>
+            <a class="card-popup__btn card-popup__btn--close popup__btn-close" href="#">
+              <img
+                class="card-popup__btn-img"
+                src="images/icons/close.png"
+                alt="close"
+              />
+            </a>
+          </div>
+          <div class="card-popup__img-box">
+            <img class="card-popup__img popup__img" src="" alt="image" />
+          </div>
+          <div class="card-popup__navigation">
+            <a
+              class="
+                card-popup__navigation-arrow card-popup__navigation-arrow--prev
+              "
+              href="#"
+            >
+              <img
+                class="card-popup__navigation-arrow__img"
+                src="images/icons/popup-prev-arrow.svg"
+                alt="previous"
+              />
+            </a>
+
+            <span class="card-popup__navigation-text"> 1 </span>
+
+            <a
+              class="
+                card-popup__navigation-arrow card-popup__navigation-arrow--next
+              "
+              href="#"
+            >
+              <img
+                class="card-popup__navigation-arrow__img"
+                src="images/icons/popup-next-arrow.svg"
+                alt="next"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
       <header class="header">
         <div class="container">
           <div class="header__top">
-            <div class="header__hamburger__btn-box">
-              <button class="header__hamburger-btn">
-                <span></span>
-              </button>
-
-              <ul class="header__aside-menu dropdown-list">
-                <li class="header__aside-menu__item dropdown-item">
-                  <a
-                    class="header__aside-menu__item-link dropdown-item__link"
-                    href="#"
-                  >
-                    Маша и медведь
-                  </a>
-                </li>
-                <li class="header__aside-menu__item dropdown-item">
-                  <a
-                    class="header__aside-menu__item-link dropdown-item__link"
-                    href="#"
-                  >
-                    Маша и медведь
-                  </a>
-                </li>
-                <li class="header__aside-menu__item dropdown-item">
-                  <a
-                    class="header__aside-menu__item-link dropdown-item__link"
-                    href="#"
-                  >
-                    Маша и медведь
-                  </a>
-                </li>
-                <li class="header__aside-menu__item dropdown-item">
-                  <a
-                    class="header__aside-menu__item-link dropdown-item__link"
-                    href="#"
-                  >
-                    Маша и медведь
-                  </a>
-                </li>
-                <li class="header__aside-menu__item dropdown-item">
-                  <a
-                    class="header__aside-menu__item-link dropdown-item__link"
-                    href="#"
-                  >
-                    Маша и медведь
-                  </a>
-                </li>
-                <li class="header__aside-menu__item dropdown-item">
-                  <a
-                    class="header__aside-menu__item-link dropdown-item__link"
-                    href="#"
-                  >
-                    Маша и медведь
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <a class="logo-link" href="#">
+            <a class="header__logo logo-link" href="#">
               <img class="logo" src="images/logo.png" alt="logo" />
             </a>
 
@@ -134,9 +126,7 @@
               </li>
               <li class="header__nav-item header__nav-item--dropdown">
                 <a class="header__nav-item__link" href="#">
-                  <span class="header__nav-item__link-text">
-                    Категории
-                  </span>
+                  <span class="header__nav-item__link-text"> Категории </span>
                 </a>
                 <ul class="header__nav__dropdown-list dropdown-list">
                   <li class="header__nav__dropdown-item dropdown-item">
@@ -203,9 +193,7 @@
                     Раскраски антистресс
                   </span>
                 </a>
-                
               </li>
-              
             </ul>
           </nav>
         </div>
@@ -243,9 +231,9 @@
 
         <section class="card-gallery products">
           <div class="container">
-            <ul class="card-gallery__list products__list">
+            <ul class="card-gallery__list popup-list products__list">
               <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/1.jpg' href="#">
                   <img
                     class="
                       card-gallery__item-link__img
@@ -265,7 +253,27 @@
                 </a>
               </li>
               <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/2.jpg' href="#">
+                  <img
+                    class="
+                      card-gallery__item-link__img
+                      products__item-link__img
+                    "
+                    src="images/card-gallery/2.jpg"
+                    alt="image"
+                  />
+                  <p
+                    class="
+                      card-gallery__item-link__text
+                      products__item-link__text
+                    "
+                  >
+                    Барби-принцесса
+                  </p>
+                </a>
+              </li>
+              <li class="card-gallery__item products__item">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/1.jpg' href="#">
                   <img
                     class="
                       card-gallery__item-link__img
@@ -285,7 +293,27 @@
                 </a>
               </li>
               <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/2.jpg' href="#">
+                  <img
+                    class="
+                      card-gallery__item-link__img
+                      products__item-link__img
+                    "
+                    src="images/card-gallery/2.jpg"
+                    alt="image"
+                  />
+                  <p
+                    class="
+                      card-gallery__item-link__text
+                      products__item-link__text
+                    "
+                  >
+                    Барби-принцесса
+                  </p>
+                </a>
+              </li>
+              <li class="card-gallery__item products__item">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/1.jpg' href="#">
                   <img
                     class="
                       card-gallery__item-link__img
@@ -305,7 +333,27 @@
                 </a>
               </li>
               <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/2.jpg' href="#">
+                  <img
+                    class="
+                      card-gallery__item-link__img
+                      products__item-link__img
+                    "
+                    src="images/card-gallery/2.jpg"
+                    alt="image"
+                  />
+                  <p
+                    class="
+                      card-gallery__item-link__text
+                      products__item-link__text
+                    "
+                  >
+                    Барби-принцесса
+                  </p>
+                </a>
+              </li>
+              <li class="card-gallery__item products__item">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/1.jpg' href="#">
                   <img
                     class="
                       card-gallery__item-link__img
@@ -325,7 +373,27 @@
                 </a>
               </li>
               <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/2.jpg' href="#">
+                  <img
+                    class="
+                      card-gallery__item-link__img
+                      products__item-link__img
+                    "
+                    src="images/card-gallery/2.jpg"
+                    alt="image"
+                  />
+                  <p
+                    class="
+                      card-gallery__item-link__text
+                      products__item-link__text
+                    "
+                  >
+                    Барби-принцесса
+                  </p>
+                </a>
+              </li>
+              <li class="card-gallery__item products__item">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/1.jpg' href="#">
                   <img
                     class="
                       card-gallery__item-link__img
@@ -345,7 +413,27 @@
                 </a>
               </li>
               <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/2.jpg' href="#">
+                  <img
+                    class="
+                      card-gallery__item-link__img
+                      products__item-link__img
+                    "
+                    src="images/card-gallery/2.jpg"
+                    alt="image"
+                  />
+                  <p
+                    class="
+                      card-gallery__item-link__text
+                      products__item-link__text
+                    "
+                  >
+                    Барби-принцесса
+                  </p>
+                </a>
+              </li>
+              <li class="card-gallery__item products__item">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/1.jpg' href="#">
                   <img
                     class="
                       card-gallery__item-link__img
@@ -365,13 +453,13 @@
                 </a>
               </li>
               <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
+                <a class="card-gallery__item-link popup-list__link products__item-link" data-image-src='images/card-gallery/2.jpg' href="#">
                   <img
                     class="
                       card-gallery__item-link__img
                       products__item-link__img
                     "
-                    src="images/card-gallery/1.jpg"
+                    src="images/card-gallery/2.jpg"
                     alt="image"
                   />
                   <p
@@ -384,106 +472,8 @@
                   </p>
                 </a>
               </li>
-              <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
-                  <img
-                    class="
-                      card-gallery__item-link__img
-                      products__item-link__img
-                    "
-                    src="images/card-gallery/1.jpg"
-                    alt="image"
-                  />
-                  <p
-                    class="
-                      card-gallery__item-link__text
-                      products__item-link__text
-                    "
-                  >
-                    Барби-принцесса
-                  </p>
-                </a>
-              </li>
-              <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
-                  <img
-                    class="
-                      card-gallery__item-link__img
-                      products__item-link__img
-                    "
-                    src="images/card-gallery/1.jpg"
-                    alt="image"
-                  />
-                  <p
-                    class="
-                      card-gallery__item-link__text
-                      products__item-link__text
-                    "
-                  >
-                    Барби-принцесса
-                  </p>
-                </a>
-              </li>
-              <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
-                  <img
-                    class="
-                      card-gallery__item-link__img
-                      products__item-link__img
-                    "
-                    src="images/card-gallery/1.jpg"
-                    alt="image"
-                  />
-                  <p
-                    class="
-                      card-gallery__item-link__text
-                      products__item-link__text
-                    "
-                  >
-                    Барби-принцесса
-                  </p>
-                </a>
-              </li>
-              <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
-                  <img
-                    class="
-                      card-gallery__item-link__img
-                      products__item-link__img
-                    "
-                    src="images/card-gallery/1.jpg"
-                    alt="image"
-                  />
-                  <p
-                    class="
-                      card-gallery__item-link__text
-                      products__item-link__text
-                    "
-                  >
-                    Барби-принцесса
-                  </p>
-                </a>
-              </li>
-              <li class="card-gallery__item products__item">
-                <a class="card-gallery__item-link products__item-link" href="#">
-                  <img
-                    class="
-                      card-gallery__item-link__img
-                      products__item-link__img
-                    "
-                    src="images/card-gallery/1.jpg"
-                    alt="image"
-                  />
-                  <p
-                    class="
-                      card-gallery__item-link__text
-                      products__item-link__text
-                    "
-                  >
-                    Барби-принцесса
-                  </p>
-                </a>
-              </li>
+              
+              
             </ul>
           </div>
         </section>
