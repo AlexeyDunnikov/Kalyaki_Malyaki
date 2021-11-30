@@ -75,6 +75,7 @@ window.addEventListener("scroll", (evt) => {
 const popup = document.querySelector(".popup");
 const popupList = document.querySelector(".popup-list");
 const popupCloseBtn = document.querySelector(".popup__btn-close");
+const printBtn = document.querySelector(".popup__btn-print");
 
 function closePopup(popup) {
   popup.classList.remove("active");
@@ -90,6 +91,8 @@ function showPopup(popup, link) {
   document.body.style.overflowY = "hidden";
   const popupImg = popup.querySelector(".popup__img");
   popupImg.src = link.dataset.imageSrc;
+
+  printBtn.dataset.printSrc = link.dataset.imageSrc;
 }
 
 popupList.addEventListener("click", (evt) => {
@@ -107,7 +110,37 @@ popup.addEventListener("click", (evt) => {
   closePopup(popup);
 });
 
-popupCloseBtn.addEventListener('click', (evt) => {
+popupCloseBtn.addEventListener("click", (evt) => {
   evt.preventDefault();
   closePopup(popup);
 });
+
+printBtn.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  const btn = evt.target.closest(".popup__btn-print");
+  const link = btn.dataset.printSrc;
+
+  console.log(link);
+
+  printPdf(link);
+
+  console.log(btn);
+});
+
+printPdf = function (url) {
+  var iframe = this._printIframe;
+  if (!this._printIframe) {
+    iframe = this._printIframe = document.createElement("iframe");
+    document.body.appendChild(iframe);
+
+    iframe.style.display = "none";
+    iframe.onload = function () {
+      setTimeout(function () {
+        iframe.focus();
+        iframe.contentWindow.print();
+      }, 1);
+    };
+  }
+
+  iframe.src = url;
+};
